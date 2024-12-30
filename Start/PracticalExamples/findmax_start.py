@@ -6,16 +6,22 @@
 items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 
 def find_max(items):
-    pass
     # TODO: breaking condition: last item in list? return it
-
+    if len(items) == 1:
+        return items[0]
 
     # TODO: otherwise get the first item and call function
     # again to operate on the rest of the list
+    val1 = items[0]
+    val2 = find_max(items[1:]) # this is a recursive call to the function. It will keep calling itself until the breaking condition is met. The function will keep calling itself with the rest of the list until the list is down to just one item. When that happens, the function will start returning the maximum value of the two items it's comparing. The function will keep returning the maximum value of the two items it's comparing until it's down to just two items. When that happens, the function will return the maximum value of the two items. The function will keep returning the maximum value of the two items it's comparing until it's down to just two items. When that happens, the function will return the maximum value of the two items.
+    print(val1, ":", val2)
 
 
     # TODO: perform the comparison when we're down to just two
-
+    if val1 > val2:
+        return val1
+    else:
+        return val2
 
 
 # test the function
